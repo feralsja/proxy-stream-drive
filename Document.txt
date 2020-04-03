@@ -1,6 +1,3 @@
-# proxy-stream-drive
-Google Drive Streaming Video Basic
-
 HD cài đặt code:
 
 1) Cài Nodejs trên VPS: https://hocvps.com/cai-dat-nodejs/
@@ -20,3 +17,9 @@ Chức năng cơ bản hiện có
 - Cache link 6h
 - Memory leak cơ bản
 - Hỗ trợ iframe - getlink - encode
+
+Chú ý: ĐÂY LÀ BẢN FREE NÊN MEMORY LEAK CHỈ Ở MỨC CƠ BẢN
+Vậy cơ bản là gì???
+
+VD bạn mở nước lấy vào xô, khi lấy xong bạn sẽ khóa nước lại để không bị tràn nước ra ngoài.
+Và code tương tự như vậy.

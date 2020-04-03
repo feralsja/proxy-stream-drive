@@ -1,0 +1,29 @@
+<style>*{margin:0;padding:0}</style>
+<script src="https://content.jwplatform.com/libraries/aG3IMhIy.js"></script>
+<div id="jwplayer"></div>
+<script>
+    function getQuery(query) {
+        var pReg = new RegExp(query + "\\=([^\\?&]+)", "i");
+        if (!pReg.test(window.location.href)) {
+            return '';
+        }
+        var pRes = pReg.exec(window['location']['href']);
+        return decodeURIComponent(pRes[1]);
+    }
+
+    var fileId;
+    if(fileId = getQuery('fileId')) {
+        fetch('/sources?fileId='+fileId)
+            .then(res => res.json())
+            .then(sources => {
+
+                delete jwplayer.defaults.aspectratio;
+                jwplayer('jwplayer').setup({
+                    width: '100%',
+                    height: '100%',
+                    sources
+                });
+            })
+            .catch(console.error);
+    }
+</script>

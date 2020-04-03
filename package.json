@@ -1,0 +1,22 @@
+{
+  "name": "proxy-stream-drive-basic",
+  "version": "1.0.1",
+  "description": "Free",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node cluster.js",
+    "pm2": "pm2 start cluster.js --name=proxy-stream-drive"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "node-cache": "^5.1.0",
+    "querystring": "^0.2.0",
+    "request": "^2.88.2"
+  }
+}
